@@ -1,0 +1,17 @@
+{
+  "name": "jualan-id",
+  "owner": {
+    "name": "Raka"
+  },
+  "plugins": [
+    {
+      "name": "funnel-jualan",
+      "source": "./plugins/funnel-jualan",
+      "version": "0.1.0",
+      "displayName": "Funnel Jualan",
+      "description": "Landing page penjualan dan materi Meta Ads yang tinggi konversi untuk pasar Indonesia. Bahasa yang terdengar manusia, bukan brosur.",
+      "category": "marketing",
+      "keywords": ["landing-page", "sales-page", "meta-ads", "copywriting", "konversi", "indonesia"]
+    }
+  ]
+}

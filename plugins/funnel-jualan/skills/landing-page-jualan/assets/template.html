@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[JUDUL HALAMAN]</title>
+<meta name="description" content="[DESKRIPSI 1 KALIMAT]">
+
+<!--
+  ============================================================
+  DAFTAR YANG PERLU DIISI
+  ------------------------------------------------------------
+  1. [PERLU DIISI: foto founder]
+  2. [PERLU DIISI: 3 screenshot hasil]
+  3. [PERLU DIISI: tanggal tutup pendaftaran]
+  4. [PERLU DIISI: link checkout]
+  (hapus baris ini setelah semua terisi)
+  ============================================================
+-->
+
+<style>
+:root{
+  --bg:#FFFFFF; --bg-alt:#F5F4F1; --ink:#1A1A1A; --ink-soft:#55534F;
+  --line:#E2E0DC; --accent:#D64200; --accent-dk:#A83400;
+  --mark:#FFE8A3; --ok:#1B7F4B;
+  --w:640px; --w-wide:860px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:17px; line-height:1.6; padding-bottom:84px;
+}
+section{padding:56px 20px}
+section.alt{background:var(--bg-alt)}
+.wrap{max-width:var(--w); margin:0 auto}
+.wrap-wide{max-width:var(--w-wide); margin:0 auto}
+
+h1{font-size:30px; line-height:1.15; font-weight:800; margin:0 0 16px}
+h2{font-size:24px; line-height:1.25; font-weight:800; margin:0 0 18px}
+h3{font-size:19px; line-height:1.3; font-weight:700; margin:28px 0 10px}
+p{margin:0 0 16px}
+.lead{font-size:19px; color:var(--ink-soft)}
+.small{font-size:14px; color:var(--ink-soft)}
+mark{background:var(--mark); padding:0 2px; border-radius:2px}
+.eyebrow{font-size:13px; font-weight:700; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--accent); margin:0 0 12px}
+
+/* daftar */
+ul.cek{list-style:none; padding:0; margin:0 0 20px}
+ul.cek li{position:relative; padding:0 0 0 30px; margin-bottom:12px}
+ul.cek li::before{content:"✓"; position:absolute; left:0; top:0;
+  color:var(--ok); font-weight:800}
+ul.gejala{list-style:none; padding:0; margin:0 0 20px}
+ul.gejala li{padding:12px 0; border-bottom:1px solid var(--line)}
+
+/* gambar & bukti */
+.shot{width:100%; border:1px solid var(--line); border-radius:6px; display:block; margin:0 0 14px}
+.ph{border:2px dashed var(--line); border-radius:6px; padding:28px 16px; text-align:center;
+  color:var(--ink-soft); font-size:14px; background:var(--bg-alt); margin:0 0 14px}
+.rail{display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory;
+  padding-bottom:8px; -webkit-overflow-scrolling:touch}
+.rail>*{flex:0 0 78%; scroll-snap-align:start}
+.quote{border-left:3px solid var(--accent); padding:4px 0 4px 16px; margin:0 0 22px}
+.quote p{margin:0 0 6px; font-size:18px}
+.quote cite{font-style:normal; font-size:14px; color:var(--ink-soft)}
+.angka{font-size:34px; font-weight:800; line-height:1.1; color:var(--accent)}
+
+/* dua kolom cocok / tidak cocok */
+.dua{display:grid; gap:16px}
+@media(min-width:700px){.dua{grid-template-columns:1fr 1fr}}
+.kotak{border:1px solid var(--line); border-radius:8px; padding:20px; background:var(--bg)}
+.kotak h3{margin-top:0}
+
+/* harga */
+.harga-box{border:2px solid var(--ink); border-radius:10px; padding:28px 20px; text-align:center}
+.harga-coret{font-size:18px; color:var(--ink-soft); text-decoration:line-through}
+.harga-final{font-size:40px; font-weight:800; color:var(--accent); line-height:1.1; margin:4px 0 6px}
+.rincian{list-style:none; padding:0; margin:0 0 20px; text-align:left}
+.rincian li{display:flex; justify-content:space-between; gap:12px;
+  padding:10px 0; border-bottom:1px solid var(--line)}
+.rincian li b{white-space:nowrap}
+.total{display:flex; justify-content:space-between; font-weight:800; padding:12px 0}
+
+/* garansi */
+.garansi{border:1px solid var(--ok); border-radius:8px; padding:20px;
+  background:#F2FBF6}
+.garansi h3{margin-top:0; color:var(--ok)}
+
+/* countdown */
+.count{display:flex; gap:8px; justify-content:center; margin:16px 0}
+.count div{background:var(--ink); color:#fff; border-radius:6px; padding:10px 12px;
+  min-width:62px; text-align:center}
+.count b{display:block; font-size:22px; line-height:1}
+.count span{font-size:11px; opacity:.75}
+
+/* tombol */
+.cta{display:block; width:100%; max-width:440px; margin:24px auto 8px;
+  padding:18px 22px; background:var(--accent); color:#fff; font-size:18px;
+  font-weight:700; text-align:center; border:0; border-radius:8px;
+  text-decoration:none; box-shadow:0 2px 0 var(--accent-dk)}
+.cta:active{transform:translateY(1px); box-shadow:none}
+.cta-note{text-align:center; font-size:14px; color:var(--ink-soft); margin:0 0 8px}
+.sticky{position:fixed; left:0; right:0; bottom:0; padding:10px 16px;
+  background:rgba(255,255,255,.97); border-top:1px solid var(--line); z-index:50;
+  transform:translateY(120%); transition:transform .2s}
+.sticky.on{transform:none}
+.sticky .cta{margin:0 auto; padding:15px 20px; font-size:17px}
+@media(min-width:768px){ .sticky{display:none} body{padding-bottom:0} }
+
+/* faq */
+details{border-bottom:1px solid var(--line); padding:16px 0}
+details summary{font-weight:700; cursor:pointer; list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+"; float:right; color:var(--accent); font-weight:800}
+details[open] summary::after{content:"–"}
+details p{margin:12px 0 0; color:var(--ink-soft)}
+
+/* form */
+form{display:grid; gap:12px; max-width:440px; margin:0 auto}
+label{font-size:14px; font-weight:600}
+input,select{width:100%; padding:14px; font-size:17px; border:1px solid var(--line);
+  border-radius:8px; font-family:inherit; background:#fff}
+input:focus,select:focus{outline:2px solid var(--accent); outline-offset:1px}
+
+footer{padding:36px 20px; border-top:1px solid var(--line); color:var(--ink-soft); font-size:14px}
+
+@media(min-width:768px){
+  body{font-size:18px}
+  section{padding:88px 24px}
+  h1{font-size:46px; line-height:1.1}
+  h2{font-size:32px}
+  .harga-final{font-size:52px}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== BLOK 1: HERO ===== -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">[UNTUK SIAPA · FORMAT · TANGGAL]</p>
+    <h1>[HEADLINE — satu ide, spesifik, tanpa nama brand]</h1>
+    <p class="lead">[SUBHEADLINE — untuk siapa, berapa lama, atau penurunan hambatan]</p>
+    <div class="ph">[PERLU DIISI: foto founder / dokumentasi / screenshot produk]</div>
+    <a class="cta" href="#daftar">[CTA orang pertama — sebut harga]</a>
+    <p class="cta-note">[satu bukti singkat: jumlah alumni, garansi, atau angka]</p>
+  </div>
+</section>
+
+<!-- ===== BLOK 2: MASALAH ===== -->
+<section class="alt">
+  <div class="wrap">
+    <h2>[Kalimat yang bikin pembaca merasa dimengerti]</h2>
+    <ul class="gejala">
+      <li>[Gejala konkret 1 — situasi harian, bukan kategori masalah]</li>
+      <li>[Gejala konkret 2]</li>
+      <li>[Gejala konkret 3]</li>
+      <li>[Gejala konkret 4]</li>
+    </ul>
+    <p>[Satu kalimat pendek yang menutup blok. Boleh berdiri sendiri.]</p>
+  </div>
+</section>
+
+<!-- ===== BLOK 3: BIAYA MASALAH ===== -->
+<section>
+  <div class="wrap">
+    <h2>[Apa yang hilang kalau dibiarkan]</h2>
+    <p class="angka">[ANGKA KONTRAS]</p>
+    <p>[Penjelasan biaya: waktu, uang, peluang. Tunjuk penyebab struktural,
+       jangan salahkan pembaca.]</p>
+  </div>
+</section>
+
+<!-- ===== BLOK 4: MEKANISME ===== -->
+<section class="alt">
+  <div class="wrap">
+    <h2>[Nama mekanismenya]</h2>
+    <p>[Reframe "bukan X, tapi Y" sebagai kalimat pembuka.]</p>
+    <h3>1. [Langkah]</h3><p>[penjelasan]</p>
+    <h3>2. [Langkah]</h3><p>[penjelasan]</p>
+    <h3>3. [Langkah]</h3><p>[penjelasan]</p>
+    <a class="cta" href="#daftar">[CTA]</a>
+  </div>
+</section>
+
+<!-- ===== BLOK 5: ISI ===== -->
+<section>
+  <div class="wrap">
+    <h2>Apa yang kamu dapat</h2>
+    <ul class="cek">
+      <li><b>[Nama bagian]</b> — [hasil yang didapat, bukan judul materi]</li>
+      <li><b>[Nama bagian]</b> — [hasil]</li>
+      <li><b>[Nama bagian]</b> — [hasil]</li>
+    </ul>
+    <!-- BLOK 6: PREVIEW -->
+    <div class="rail">
+      <div class="ph">[PERLU DIISI: screenshot isi 1]</div>
+      <div class="ph">[PERLU DIISI: screenshot isi 2]</div>
+      <div class="ph">[PERLU DIISI: screenshot isi 3]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 7: BUKTI ===== -->
+<section class="alt">
+  <div class="wrap-wide">
+    <h2>[Judul bukti — sebut angka kalau ada]</h2>
+    <div class="quote">
+      <p>"[Kutipan verbatim, bahasa aslinya, jangan dirapikan]"</p>
+      <cite>— [Nama], [peran / kota]</cite>
+    </div>
+    <div class="quote">
+      <p>"[Kutipan verbatim]"</p>
+      <cite>— [Nama], [peran / kota]</cite>
+    </div>
+    <div class="rail">
+      <div class="ph">[PERLU DIISI: screenshot hasil 1]</div>
+      <div class="ph">[PERLU DIISI: screenshot hasil 2]</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 8: DISKUALIFIKASI ===== -->
+<section>
+  <div class="wrap-wide">
+    <h2>Untuk siapa ini — dan untuk siapa bukan</h2>
+    <div class="dua">
+      <div class="kotak">
+        <h3>Cocok kalau kamu…</h3>
+        <ul class="cek"><li>[…]</li><li>[…]</li><li>[…]</li></ul>
+      </div>
+      <div class="kotak">
+        <h3>Jangan ambil kalau…</h3>
+        <ul class="gejala"><li>[alasan nyata]</li><li>[alasan nyata]</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 9: FOUNDER ===== -->
+<section class="alt">
+  <div class="wrap">
+    <h2>[Nama]</h2>
+    <div class="ph">[PERLU DIISI: foto founder, ukuran besar, bukan headshot bulat]</div>
+    <p>[Kerentanan dulu — satu kalimat yang nyata.]</p>
+    <p>[Baru bukti berangka yang bisa dicek.]</p>
+  </div>
+</section>
+
+<!-- ===== BLOK 10+11: PENAWARAN & BONUS ===== -->
+<section id="daftar">
+  <div class="wrap">
+    <h2>[Judul penawaran]</h2>
+    <ul class="rincian">
+      <li><span>[Komponen inti]</span> <b>Rp [...]</b></li>
+      <li><span>Bonus 1 — [menjawab keberatan A]</span> <b>Rp [...]</b></li>
+      <li><span>Bonus 2 — [menjawab keberatan B]</span> <b>Rp [...]</b></li>
+      <li><span>Bonus 3 — [menjawab keberatan C]</span> <b>Rp [...]</b></li>
+    </ul>
+    <div class="total"><span>Total nilai</span><span>Rp [...]</span></div>
+
+    <div class="harga-box">
+      <div class="harga-coret">Rp [harga normal]</div>
+      <div class="harga-final">Rp [harga sekarang]</div>
+      <p class="small">[pembanding verbal — "kurang dari harga 2 gelas kopi"]</p>
+      <a class="cta" href="[LINK CHECKOUT]">[CTA orang pertama — sebut harga]</a>
+      <p class="cta-note">[metode pembayaran / COD]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 12: GARANSI ===== -->
+<section>
+  <div class="wrap">
+    <div class="garansi">
+      <h3>[Judul garansi]</h3>
+      <p>[Kalimat garansi yang user benar-benar sanggup penuhi. Jangan dikarang.]</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BLOK 13: URGENSI ===== -->
+<section class="alt">
+  <div class="wrap" style="text-align:center">
+    <h2>[Mekanisme urgensi yang NYATA]</h2>
+    <div class="count" id="count">
+      <div><b data-d>00</b><span>hari</span></div>
+      <div><b data-h>00</b><span>jam</span></div>
+      <div><b data-m>00</b><span>menit</span></div>
+      <div><b data-s>00</b><span>detik</span></div>
+    </div>
+    <p class="small">[alasan urgensinya — batch, kuota, atau harga naik terjadwal]</p>
+    <a class="cta" href="#daftar">[CTA]</a>
+  </div>
+</section>
+
+<!-- ===== BLOK 14: FAQ ===== -->
+<section>
+  <div class="wrap">
+    <h2>Pertanyaan yang sering masuk</h2>
+    <details><summary>[Pertanyaan soal harga, ditulis seperti orang beneran nanya]</summary><p>[Jawab pendek dan jujur.]</p></details>
+    <details><summary>[Pertanyaan soal waktu]</summary><p>[...]</p></details>
+    <details><summary>[Cocok nggak buat kasus saya]</summary><p>[...]</p></details>
+    <details><summary>[Saya pemula banget]</summary><p>[...]</p></details>
+    <details><summary>[Cara akses setelah bayar]</summary><p>[...]</p></details>
+  </div>
+</section>
+
+<!-- ===== BLOK 15: CTA PENUTUP ===== -->
+<section class="alt">
+  <div class="wrap" style="text-align:center">
+    <h2>[Kalimat penutup — ulang janji utama, jangan basa-basi]</h2>
+    <a class="cta" href="[LINK CHECKOUT]">[CTA]</a>
+  </div>
+</section>
+
+<!-- ===== BLOK 16: DISCLAIMER ===== -->
+<footer>
+  <div class="wrap">
+    <p>[Disclaimer hasil — wajib untuk klaim bisnis/finansial/kesehatan.]</p>
+    <p>© [TAHUN] [NAMA BRAND]. Halaman ini tidak berafiliasi dengan Meta.</p>
+  </div>
+</footer>
+
+<div class="sticky" id="sticky">
+  <a class="cta" href="#daftar">[CTA pendek — sebut harga]</a>
+</div>
+
+<script>
+// countdown — ganti tanggalnya, atau hapus blok ini kalau urgensinya bukan waktu
+var akhir = new Date("2026-12-31T23:59:59+07:00").getTime();
+var el = document.getElementById("count");
+if (el) {
+  var d=el.querySelector("[data-d]"),h=el.querySelector("[data-h]"),
+      m=el.querySelector("[data-m]"),s=el.querySelector("[data-s]");
+  var pad=function(n){return n<10?"0"+n:""+n};
+  setInterval(function(){
+    var t=akhir-Date.now(); if(t<0)t=0;
+    d.textContent=pad(Math.floor(t/864e5));
+    h.textContent=pad(Math.floor(t/36e5)%24);
+    m.textContent=pad(Math.floor(t/6e4)%60);
+    s.textContent=pad(Math.floor(t/1e3)%60);
+  },1000);
+}
+// sticky CTA muncul setelah hero lewat
+var st=document.getElementById("sticky");
+addEventListener("scroll",function(){
+  st.classList.toggle("on", scrollY > innerHeight*0.8);
+},{passive:true});
+</script>
+</body>
+</html>
