@@ -7,11 +7,18 @@
     {
       "name": "funnel-jualan",
       "source": "./plugins/funnel-jualan",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "displayName": "Funnel Jualan",
       "description": "Landing page penjualan dan materi Meta Ads yang tinggi konversi untuk pasar Indonesia. Bahasa yang terdengar manusia, bukan brosur.",
       "category": "marketing",
-      "keywords": ["landing-page", "sales-page", "meta-ads", "copywriting", "konversi", "indonesia"]
+      "keywords": [
+        "landing-page",
+        "sales-page",
+        "meta-ads",
+        "copywriting",
+        "konversi",
+        "indonesia"
+      ]
     }
   ]
 }

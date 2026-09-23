@@ -1,7 +1,16 @@
 {
   "name": "funnel-jualan",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Bikin landing page penjualan dan materi Meta Ads yang tinggi konversi untuk pasar Indonesia — bahasa yang terdengar manusia, bukan brosur atau AI.",
-  "keywords": ["landing-page", "sales-page", "meta-ads", "copywriting", "konversi", "indonesia"],
-  "author": { "name": "Raka" }
+  "keywords": [
+    "landing-page",
+    "sales-page",
+    "meta-ads",
+    "copywriting",
+    "konversi",
+    "indonesia"
+  ],
+  "author": {
+    "name": "Raka"
+  }
 }
