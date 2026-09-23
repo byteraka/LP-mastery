@@ -1,4 +1,4 @@
-# Enam Gaya Desain
+# Tujuh Gaya Desain
 
 Semua token di bawah diambil langsung dari halaman aslinya, bukan dikira-kira.
 Tiap gaya punya sikap. **Pilih satu dan jalankan sepenuhnya** — mencampur dua gaya
@@ -12,15 +12,16 @@ Kelas tiket menyaring dulu, baru user memilih dari yang tersisa.
 
 | Kelas tiket | Gaya yang cocok |
 |---|---|
-| Impuls (< Rp 300rb) | Direct Response · Hangat Editorial · Gelap Brutalist |
-| Pertimbangan (Rp 300rb–3jt) | Gelap Premium · Gelap Brutalist · Hangat Editorial |
+| Impuls (< Rp 300rb) | Direct Response · Hangat Editorial · Terang Brutalist |
+| Pertimbangan (Rp 300rb–3jt) | Gelap Premium · Gelap Brutalist · Terang Brutalist · Hangat Editorial |
 | Keputusan (Rp 3–25jt) | Gelap Premium · Korporat Tenang |
 | Tinggi (> Rp 25jt) | Korporat Tenang |
 | Langganan / software | SaaS Gelap |
+| Lead magnet / webinar gratis | Terang Brutalist · Korporat Tenang — **halaman pendek** |
 
 Kalau user punya link referensi desainnya sendiri, **buka halamannya, tarik tokennya
 (warna, font, ukuran heading, radius, bayangan), lalu bangun dari situ** — jangan paksa
-masuk ke salah satu dari enam ini.
+masuk ke salah satu dari tujuh ini.
 
 ---
 
@@ -187,6 +188,32 @@ Butuh screenshot antarmuka yang bagus. Tanpa itu gaya ini kosong.
 
 ---
 
+## 7. TERANG BRUTALIST
+*Contoh: page.karyawan.ai/all-in-one, page.karyawan.ai/join, produk.karyawan.ai/kai-bali-page*
+
+Kembaran terang dari Gelap Brutalist. Kuning yang sama, energi yang sama, tapi
+terasa lebih ramah dan lebih gampang dibaca di luar ruangan.
+
+```css
+--bg:        #FFFEF2;   /* krem kekuningan — atau #FAFAF7, atau putih */
+--ink:       #0F0F0F;
+--accent:    #FFD600;   /* kuning, sama dengan Gelap Brutalist */
+--radius:    10px;      /* kotak */  --radius-btn: 999px;  /* tombol pil */
+--border:    2px solid #0F0F0F;
+```
+
+- H1: **Bebas Neue 42px weight 400** atau **Sora 30px weight 800**, KAPITAL, rata kiri
+- Body: Inter 16–17px
+- Tombol kuning, teks hitam, weight 700–800, radius pil
+- **Kotak highlight berborder tegas** mengelilingi satu kata kunci di headline:
+  latar kuning, border hitam 2px. Bukan stabilo — kotak.
+- **Badge harga menempel di pojok visual hero** (foto atau mockup HP):
+  "Rp 197.000 · EARLY BIRD"
+- **Bar sticky bawah yang menyebut harga**: "Daftar Webinar — Rp 100.000 →"
+- Baris chip di bawah headline: "Tanpa coding · Tanpa skill teknis · Step-by-step dari nol"
+
+Paling serbaguna dari tujuh gaya. Aman untuk hampir semua produk edukasi dan event.
+
 ## KALAU BELUM ADA ASET SAMA SEKALI
 
 `lp-mastery` punya **nol gambar** dan tetap terlihat penuh. Ini bukti bahwa halaman kosong
@@ -222,3 +249,57 @@ Tidak ada satu pun yang memakai ilustrasi vektor generik.
 
 Sembilan dari sembilan memakai **satu warna aksen dominan** (dua hanya di Hangat Editorial
 dan SaaS Gelap). Tidak ada yang memakai tiga atau lebih.
+
+---
+
+## PERANGKAT VISUAL LINTAS GAYA
+
+Dipungut dari 22 halaman. Boleh dipakai di gaya mana pun selama warnanya mengikuti
+token gaya yang dipilih.
+
+**Badge harga menempel di visual hero.** Kotak kecil berwarna aksen di pojok foto atau
+mockup: "Rp 197.000 · EARLY BIRD". Harga terlihat sebelum orang scroll.
+
+**Bar sticky bawah yang menyebut harga.** Bukan cuma "Daftar" — sebut angkanya.
+Menyaring klik yang tidak serius sekaligus mengingatkan terus.
+
+**Bar pengumuman di paling atas.** Strip tipis berisi kelangkaan atau tanggal,
+di atas segalanya: "NOV & DES HABIS, 28–30 JAN DIBUKA" atau countdown berjalan.
+
+**Lingkaran gambar tangan** melingkari satu kata di headline. Satu goresan SVG.
+Terasa ditulis orang, bukan di-generate.
+
+**Kolase foto member dengan angka melayang.** Wajah-wajah mengelilingi video hero,
+tiap wajah diberi angka hasilnya: "Rp50.000.000+". Bukti sosial dan visual sekaligus.
+
+**Kotak highlight berborder** mengelilingi satu kata — latar aksen, border tebal.
+Alternatif dari stabilo, terasa lebih terstruktur.
+
+**Headline berupa kutipan dalam tanda kutip.** Seluruh headline adalah kalimat pembeli:
+"Percuma aja retargeting kalau hasilnya masih stuck gini..."
+
+**Baris logo klien atau brand** sesudah hero. Hanya kalau logonya nyata.
+
+**Label penunjuk di atas screenshot**: "From this ⬇" atau "Pengguna 2:" —
+mengarahkan mata dan memberi konteks pada bukti mentah.
+
+**CTA gemuk untuk halaman gratis.** Lead magnet acquisition.com memakai pil kuning
+radius 50px, font 20px weight 900, padding 25px. Jauh lebih besar dari CTA berbayarnya.
+
+---
+
+## PANJANG HALAMAN MENURUT TUJUAN
+
+Diukur dari 22 halaman:
+
+| Tujuan | Panjang nyata |
+|---|---|
+| Lead magnet / opt-in | **2.400–2.500px** |
+| Ecourse tiket rendah | 4.700–6.900px |
+| Ebook / playbook | 7.800–8.300px |
+| Kelas & webinar | 9.100–14.600px |
+| Workshop & seminar | 11.000–17.200px |
+| SaaS | 20.600px |
+
+Halaman lead magnet acquisition.com cuma **2.490px** — seperlima halaman jualannya.
+Jangan bikin halaman panjang untuk sesuatu yang gratis: orang berpikir "kok ribet amat".

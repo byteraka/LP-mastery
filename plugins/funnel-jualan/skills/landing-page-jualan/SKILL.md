@@ -97,24 +97,25 @@ Buka `references/arsitektur.md`, pilih satu dari tujuh arsitektur.
 
 ## LANGKAH 3 — Tawarkan gaya desain
 
-Buka `references/gaya-desain.md`. Enam gaya, semuanya diambil dari halaman nyata yang
-sedang jalan, lengkap dengan token aslinya.
+Buka `references/gaya-desain.md`. Tujuh gaya, semuanya diambil dari 22 halaman nyata
+yang sedang jalan, lengkap dengan token aslinya.
 
 **Saring dulu dengan kelas tiket, baru tawarkan sisanya ke user.** Jangan tawarkan semua
-enam — gaya promo keras di produk Rp15jt merusak kepercayaan, gaya korporat tenang di
+tujuh — gaya promo keras di produk Rp15jt merusak kepercayaan, gaya korporat tenang di
 ebook Rp79rb membunuh volume.
 
 | Kelas tiket | Tawarkan |
 |---|---|
-| Impuls | Direct Response · Hangat Editorial · Gelap Brutalist |
-| Pertimbangan | Gelap Premium · Gelap Brutalist · Hangat Editorial |
+| Impuls | Direct Response · Hangat Editorial · Terang Brutalist |
+| Pertimbangan | Gelap Premium · Gelap Brutalist · Terang Brutalist · Hangat Editorial |
 | Keputusan | Gelap Premium · Korporat Tenang |
 | Tinggi | Korporat Tenang |
 | Langganan / software | SaaS Gelap |
+| Lead magnet / webinar gratis | Terang Brutalist · Korporat Tenang — halaman pendek |
 
 Selalu sertakan pilihan keempat: **"Aku punya referensi sendiri"**. Kalau user memberi link,
 buka halamannya, tarik tokennya — warna, font, ukuran heading, radius, bayangan, cara
-mengisi hero — lalu bangun dari situ. Jangan paksa masuk ke salah satu dari enam.
+mengisi hero — lalu bangun dari situ. Jangan paksa masuk ke salah satu dari tujuh.
 
 Sebutkan singkat kenapa satu gaya cocok untuk produknya, supaya user memilih dengan dasar.
 Kalau user tidak menjawab, pakai yang pertama di daftar dan katakan alasannya.

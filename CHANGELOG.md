@@ -2,6 +2,11 @@
 
 <!-- rilis-baru-di-sini -->
 
+## 0.4.0 — 2026-09-24
+
+- Seluruh 22 halaman referensi dibuka dan diperiksa tokennya. Gaya ketujuh (Terang Brutalist), library perangkat visual lintas gaya, dan tabel panjang halaman menurut tujuan. Lead magnet dikonfirmasi harus pendek (2.4rb px vs 11rb px halaman jualan).
+
+
 ## 0.3.0 — 2026-09-24
 
 - Sistem gaya desain baru dari pembedahan 8 landing page referensi secara visual: 6 gaya dengan token asli (Gelap Brutalist, Gelap Premium, Direct Response, Korporat Tenang, Hangat Editorial, SaaS Gelap), disaring per kelas tiket. Brief jadi satu form lengkap di depan. Larangan keras placeholder di hero plus 7 pengisi visual berbasis teks. Koreksi temuan lama soal latar putih.
