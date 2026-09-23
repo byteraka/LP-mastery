@@ -1,236 +1,218 @@
-# Desain — supaya tidak terlihat buatan AI
+# Desain — aturan craft
 
-Halaman jualan yang convert di pasar Indonesia **tidak terlihat seperti homepage startup.**
-Lebih dekat ke dokumen panjang berisi screenshot asli. Justru kerapian berlebihan yang
-bikin halaman terasa dibuat mesin.
+Gaya dan tokennya ada di `gaya-desain.md`. File ini aturan yang berlaku lintas gaya:
+ritme, tipografi, mobile, kecepatan, komponen.
 
-Data dari 16 halaman berperforma yang dibedah:
+---
 
-| Elemen | Ditemukan |
+## KOREKSI TERHADAP RISET LAMA
+
+Versi pertama file ini menyatakan "15 dari 16 halaman berlatar putih". **Itu salah.**
+Angka itu dari membaca deskripsi teks halaman, bukan melihat halamannya.
+
+Setelah delapan halaman referensi benar-benar dibuka dan diperiksa tokennya:
+
+| | Temuan sebenarnya |
 |---|---|
-| Background putih / netral | 15 dari 16 |
-| Satu kolom, mobile-first | 16 dari 16 |
-| Sangat panjang (5.000px+) | 12 dari 16 |
-| Foto asli (founder, kelas, produk) | 14 dari 16 |
-| Screenshot mentah sebagai bukti | 13 dari 16 |
-| Gradien / glassmorphism | 1 dari 16 |
-| Ilustrasi generik | 0 dari 16 |
-| Tiga kartu fitur berikon seragam | 1 dari 16 |
+| Latar gelap | 4 dari 8 (jastip, lp-mastery, fortis, konvert) |
+| Latar terang | 4 dari 8 (conversionclub, acquisition, nrhouse, klinikmarketing) |
+| Satu kolom, mobile-first | 8 dari 8 |
+| Ilustrasi vektor generik | 0 dari 8 |
+| Satu warna aksen dominan | 6 dari 8 (dua sisanya pakai dua aksen) |
+| Panjang halaman | 6.888px – 20.604px |
+| Halaman tanpa gambar sama sekali | 1 (lp-mastery — dan tetap terlihat penuh) |
+
+**Gelap bukan pengecualian. Gelap adalah setengah pasarnya.**
+
+---
+
+## SKALA TIPOGRAFI MENURUT KELAS TIKET
+
+Pola paling konsisten dari seluruh referensi: **makin mahal tiketnya, makin kecil
+headline-nya.** Halaman murah berteriak, halaman mahal berbicara pelan.
+
+| Kelas tiket | H1 desktop | Weight | Line-height | Rata |
+|---|---|---|---|---|
+| Impuls | 35–54px | 700–800 | 1.0–1.4 | tengah atau kiri |
+| Pertimbangan | 36–50px | 800–900 | 1.1–1.2 | kiri atau tengah |
+| Keputusan | 34–40px | 800 | 1.2 | kiri |
+| Tinggi | 32–34px | 800 | 1.2 | tengah |
+
+Di mobile, kurangi sekitar 35%. H1 mobile 30–36px sudah cukup besar.
+
+Badan teks: 14px untuk gaya Direct Response dan Korporat Tenang, 16–16.5px untuk sisanya.
+Jangan di bawah 14px.
+
+Line-height headline **selalu lebih rapat dari badan teks** — 1.0 sampai 1.2 untuk
+headline, 1.5 sampai 1.65 untuk badan.
+
+---
+
+## LEBAR DAN RUANG
+
+Teks maksimal **640px**. Blok bukti dan tabel boleh 860px. Strip warna boleh penuh.
+
+Jarak antar blok: 56px mobile, 88px desktop. Di dalam blok 20px.
+Padding samping mobile 20px, tidak kurang.
+
+**Halaman panjang itu normal.** Referensi terpendek 6.888px, terpanjang 20.604px.
+Jangan memangkas blok supaya halaman terlihat ringkas — yang dipangkas biasanya
+blok bukti atau blok keberatan, dan itu yang menutup penjualan.
+
+---
+
+## RITME SECTION
+
+Halaman sepanjang 10.000px butuh penanda supaya pembaca tahu di mana dia.
+
+- **Latar selang-seling**: beri `--bg-alt` pada section tertentu. Maksimal tiga
+  dalam satu halaman, jangan berselang-seling terus-menerus.
+- **Eyebrow kecil berwarna aksen** di atas tiap judul section — dipakai di jastip,
+  lp-mastery, nrhouse, konvert.
+- **Angka besar sebagai penanda section** — "02 CARA MELATIH TIM". Dipakai acquisition.com.
+- Jangan bikin semua section tingginya sama. Ritme yang terlalu rata terbaca seperti template.
 
 ---
 
 ## YANG DILARANG — sidik jari desain AI
 
-**Gradien ungu-ke-biru** di hero, tombol, atau teks. Ini penanda paling cepat dikenali.
-Satu warna solid selalu lebih baik.
+**Gradien ungu-ke-biru** di hero, tombol, atau teks. Penanda paling cepat dikenali.
+Catatan: gradien *boleh* di gaya SaaS Gelap, tapi sebagai glow di belakang hero,
+bukan sebagai isi tombol.
 
-**Glassmorphism** — `backdrop-filter: blur()` pada kartu melayang. Tidak pernah muncul
-di halaman jualan yang berperforma.
+**Glassmorphism** — `backdrop-filter: blur()` pada kartu melayang. Nol dari delapan referensi.
 
-**Tiga kartu fitur sejajar dengan ikon seragam.** Pola yang paling sering dihasilkan AI dan
-paling jarang ada di halaman yang convert. Kalau perlu mendaftar manfaat, pakai daftar
-vertikal biasa.
+**Tiga kartu fitur sejajar dengan ikon seragam.** Pola paling sering dihasilkan AI,
+paling jarang ada di halaman yang convert. Pakai daftar vertikal atau grid 2×2 bergaya.
 
-**Ilustrasi vektor generik** (gaya undraw, orang tanpa wajah, bentuk abstrak). Nol dari
-16 halaman memakainya. Ganti dengan foto asli atau screenshot.
+**Ilustrasi vektor generik.** Nol dari delapan. Ganti dengan foto asli, screenshot,
+atau pengisi visual berbasis teks.
 
 **Hero rata tengah dengan bentuk abstrak di belakangnya.**
 
-**Teks bergradien.**
+**Simetri sempurna** — semua blok tingginya sama, semua kolom seimbang.
 
-**`border-radius` besar di semua elemen plus `box-shadow` tebal di mana-mana.**
+**Logo "dipercaya oleh" yang tidak nyata.**
 
-**Simetri sempurna.** Semua blok tingginya sama, semua kolom seimbang. Halaman asli punya
-ritme yang tidak rata.
-
-**Logo "dipercaya oleh" yang tidak nyata.** Kalau user tidak punya klien itu, jangan pasang.
-
-**Dark mode toggle** yang tidak diminta.
+**Kotak placeholder di hero.** Ini kesalahan terparah: ruang paling berharga di halaman
+diisi lubang abu-abu. Halaman tanpa gambar di hero selalu lebih baik daripada halaman
+dengan lubang di hero.
 
 ---
 
-## YANG DIPAKAI
+## GAMBAR
 
-### Warna
+Urutan prioritas: **foto asli > screenshot mentah > mockup > pengisi berbasis teks >
+tidak ada gambar.** Ilustrasi generik ada di bawah "tidak ada gambar".
 
-Satu warna aksen saja. Dipakai untuk tombol, angka harga, dan highlight — tidak untuk
-yang lain. Sisanya netral.
-
-```css
-:root {
-  --bg:        #FFFFFF;   /* atau #FAFAF8 untuk kesan cetak */
-  --bg-alt:    #F5F4F1;   /* blok selang-seling */
-  --ink:       #1A1A1A;   /* hampir hitam, bukan hitam murni */
-  --ink-soft:  #55534F;   /* teks sekunder */
-  --line:      #E2E0DC;   /* garis dan border */
-  --accent:    #D64200;   /* SATU warna aksen — ganti sesuai brand */
-  --accent-dk: #A83400;   /* hover */
-  --mark:      #FFE8A3;   /* highlight stabilo */
-  --ok:        #1B7F4B;   /* garansi, centang */
-}
-```
-
-Aksen yang bekerja di pasar Indonesia: oranye-merah, merah, hijau tua, biru tua.
-Hindari ungu — terlalu lekat dengan tampilan AI.
-
-### Tipografi
-
-Sans-serif, satu keluarga, dua sampai tiga bobot. Jangan campur dua font display.
-
-```css
-font-family: "Inter", -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-```
-
-Skala mobile-first. **Ukuran badan teks minimal 17px** — halaman ini dibaca sambil jalan.
-
-| Elemen | Mobile | Desktop |
-|---|---|---|
-| Headline hero | 30px / 1.15 | 46px / 1.1 |
-| Judul blok | 24px / 1.2 | 32px |
-| Badan teks | 17px / 1.6 | 18px / 1.65 |
-| Teks kecil | 14px | 15px |
-| Angka harga | 34px | 44px |
-
-Headline pakai bobot 700–800. Badan teks 400. Jangan menebali seluruh paragraf.
-
-### Lebar dan ruang
-
-Teks maksimal **640px**. Blok bukti dan tabel boleh sampai 860px. Halaman penuh untuk
-strip warna.
-
-Jarak antar blok: 56px di mobile, 88px di desktop. Di dalam blok: 20px.
-Padding samping mobile: 20px, tidak kurang.
-
-### Gambar
-
-Urutan prioritas: **foto asli > screenshot mentah > mockup > tidak ada gambar sama sekali.**
-Ilustrasi generik selalu lebih buruk daripada tidak ada gambar.
-
-Screenshot dipasang dengan border tipis dan radius kecil, bukan melayang di kartu berbayang:
+Screenshot dipasang berbeda tergantung gaya:
+- Direct Response: **mentah, tanpa bingkai, tanpa bayangan.** Itu kekuatannya.
+- Gaya lain: border tipis, radius kecil.
 
 ```css
 .shot { width:100%; border:1px solid var(--line); border-radius:6px; display:block; }
 ```
 
-Foto orang tidak dipotong bulat kecil. Foto founder yang besar dan biasa saja lebih
-dipercaya daripada headshot bulat 64px.
+Foto orang jangan dipotong bulat kecil. Foto founder besar dan biasa saja lebih dipercaya
+daripada headshot bulat 64px.
 
-Kalau aset belum ada, pasang placeholder yang **menyebut persis apa yang harus diisi**:
+Placeholder ditulis spesifik dan **tidak pernah di hero**:
 
 ```html
-<div class="ph">[PERLU DIISI: screenshot chat WhatsApp dari 3 alumni, tanpa nama]</div>
+<div class="ph">[PERLU DIISI: screenshot chat WhatsApp dari 3 alumni, nama disamarkan]</div>
 ```
 
-Jangan pakai gambar dummy dari internet.
+---
 
-### Highlight stabilo
+## TOMBOL
 
-Ciri khas halaman jualan Indonesia yang asli. Pakai untuk 3–5 frasa kunci di seluruh
-halaman, tidak lebih.
+Satu bentuk untuk seluruh halaman. Besar, kontras tinggi, teks kalimat orang pertama.
 
-```css
-mark { background: var(--mark); padding:0 2px; border-radius:2px; }
-```
+Radius mengikuti gaya: 4px (Brutalist, Direct Response, Korporat), 12px (SaaS),
+999px pil (Gelap Premium).
 
-### Tombol
-
-Satu bentuk tombol untuk seluruh halaman. Besar, kontras tinggi, teks kalimat orang pertama.
+Padding minimal 16px atas-bawah. Gaya Gelap Premium bahkan sampai 26px.
 
 ```css
-.cta {
+.cta{
   display:block; width:100%; max-width:440px; margin:24px auto;
-  padding:18px 24px; background:var(--accent); color:#fff;
+  padding:18px 24px; background:var(--accent); color:var(--on-accent);
   font-size:18px; font-weight:700; text-align:center;
-  border:0; border-radius:8px; text-decoration:none;
-  box-shadow:0 2px 0 var(--accent-dk);
+  border:0; border-radius:var(--radius); text-decoration:none;
 }
 ```
 
-Tanpa gradien, tanpa bayangan tebal, tanpa animasi berdenyut.
+Tanpa animasi berdenyut. Bayangan hanya kalau gayanya memang memakainya —
+offset keras untuk Brutalist, lembut untuk Gelap Premium, nihil untuk sisanya.
 
-**Sticky CTA di mobile** muncul setelah hero lewat:
-
-```css
-.sticky { position:fixed; left:0; right:0; bottom:0; padding:10px 16px;
-          background:rgba(255,255,255,.96); border-top:1px solid var(--line); z-index:50; }
-@media (min-width:768px){ .sticky{ display:none; } }
-```
-
-### Blok harga
-
-Blok paling menonjol di halaman. Harga coret kecil dan abu, harga akhir besar dan berwarna
-aksen. Beri border tegas, bukan bayangan.
+**Sticky CTA di mobile**, muncul setelah hero lewat:
 
 ```css
-.harga-box { border:2px solid var(--ink); border-radius:10px; padding:28px 20px; }
-.harga-coret { font-size:18px; color:var(--ink-soft); text-decoration:line-through; }
-.harga-final { font-size:40px; font-weight:800; color:var(--accent); line-height:1.1; }
+.sticky{ position:fixed; left:0; right:0; bottom:0; padding:10px 16px;
+         background:var(--bg); border-top:1px solid var(--line); z-index:50;
+         transform:translateY(120%); transition:transform .2s; }
+.sticky.on{ transform:none; }
+@media(min-width:768px){ .sticky{ display:none; } }
 ```
 
-### Daftar
+Tombol WhatsApp melayang di kanan bawah adalah konvensi pasar Indonesia —
+dipakai fortis dan banyak halaman lain. Pakai kalau jalur aksinya WhatsApp.
 
-Daftar vertikal dengan penanda konsisten. Satu simbol untuk seluruh halaman, bukan emoji
-berbeda tiap baris.
+---
 
-Register A: tanda centang sederhana.
-Register B: ✅ pada setiap baris adalah konvensi pasar dan boleh dipakai penuh.
+## BLOK HARGA
 
-### Blok selang-seling
+Blok paling menonjol di halaman. Harga coret kecil dan redup, harga akhir besar
+dan berwarna aksen. Border tegas, bukan bayangan.
 
-Beri latar `--bg-alt` pada blok tertentu supaya halaman panjang tetap terbaca dan pembaca
-tahu di mana dia. Jangan lebih dari tiga blok berlatar di seluruh halaman.
+```css
+.harga-box{ border:2px solid var(--ink); border-radius:10px; padding:28px 20px; }
+.harga-coret{ font-size:18px; opacity:.6; text-decoration:line-through; }
+.harga-final{ font-size:40px; font-weight:800; color:var(--accent); line-height:1.1; }
+```
 
 ---
 
 ## MOBILE
 
-Lebih dari 90% traffic Meta Ads di Indonesia dari HP. Desain untuk HP dulu,
-desktop cuma pelebaran.
+Lebih dari 90% traffic Meta Ads di Indonesia dari HP. Desain untuk HP dulu.
 
 - Satu kolom selalu. Tidak ada grid dua kolom di bawah 768px.
 - Target sentuh minimal 44px.
-- Tidak ada scroll horizontal. Cek tabel dan kode — bungkus dengan `overflow-x:auto`.
-- Form: `inputmode="numeric"` untuk nomor, `type="tel"` untuk WhatsApp.
-- Sticky CTA di bawah.
-- Tes lebar 360px sebelum kirim.
+- Tidak ada scroll horizontal. Bungkus tabel dengan `overflow-x:auto`.
+- Form: `type="tel"` dan `inputmode="numeric"` untuk nomor.
+- Tes di 390px **dan** 1440px sebelum kirim. Halaman yang benar di 390px bisa
+  terbaca kosong di 1440px — itu yang bikin halaman terasa belum jadi.
 
 ---
 
 ## KECEPATAN
 
-Halaman yang lambat membakar budget iklan sebelum orang sempat membaca. Kalau
-landing page view jauh lebih kecil dari link click, itu kebocoran teknis, bukan masalah copy.
+Halaman lambat membakar budget iklan sebelum orang sempat membaca. Kalau landing page
+view jauh lebih kecil dari link click, itu kebocoran teknis, bukan masalah copy.
 
-- Satu file HTML, CSS inline di `<style>`, JS inline dan seminimal mungkin.
-- Tanpa framework, tanpa jQuery, tanpa library animasi.
-- Font: pakai font sistem kalau bisa. Kalau memakai webfont, maksimal dua bobot
-  dan `font-display:swap`.
-- Gambar `loading="lazy"` kecuali gambar hero.
-- Tanpa library carousel — pakai `scroll-snap` CSS.
-- Countdown ditulis dengan JS polos, maksimal 15 baris.
+- Satu file HTML, CSS inline di `<style>`, JS inline seminimal mungkin.
+- Tanpa framework, tanpa jQuery, tanpa library animasi, **tanpa Tailwind CDN.**
+- Webfont maksimal dua bobot, `font-display:swap`. Font sistem kalau bisa.
+  Font display untuk H1 (Anton, Fraunces, Onest) cukup satu bobot.
+- Gambar `loading="lazy"` kecuali hero.
+- Carousel pakai `scroll-snap` CSS, bukan library.
+- Countdown JS polos, maksimal 15 baris.
 
 ---
 
 ## STRUKTUR FILE
 
-Satu file HTML self-contained:
-
 ```
 <style> ... </style>          token + komponen, inline
 <body>
   <section class="hero"> ... </section>
-  <section> ... </section>     satu section per blok, diberi komentar nama bloknya
+  <!-- ===== BLOK 3: BIAYA MASALAH ===== -->
+  <section> ... </section>
   <div class="sticky"> ... </div>
 </body>
 <script> ... </script>        countdown + smooth scroll saja
 ```
 
-Beri komentar HTML di atas tiap section dengan nama bloknya, supaya user gampang
-mengedit sendiri:
-
-```html
-<!-- ===== BLOK 3: BIAYA MASALAH ===== -->
-```
-
-Sertakan di paling atas file satu blok komentar berisi daftar semua `[PERLU DIISI]`
-yang ada di halaman, supaya user tinggal menyisir.
+Beri komentar HTML di atas tiap section dengan nama bloknya supaya user gampang mengedit.
+Di paling atas file, satu blok komentar berisi daftar semua `[PERLU DIISI]` di halaman.
