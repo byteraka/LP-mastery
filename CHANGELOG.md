@@ -2,6 +2,11 @@
 
 <!-- rilis-baru-di-sini -->
 
+## 0.4.1 — 2026-09-24
+
+- Catatan bedah 22 halaman referensi dimasukkan ke dalam skill sebagai references/bedah-referensi.md, supaya ikut terbawa saat plugin dibagikan.
+
+
 ## 0.4.0 — 2026-09-24
 
 - Seluruh 22 halaman referensi dibuka dan diperiksa tokennya. Gaya ketujuh (Terang Brutalist), library perangkat visual lintas gaya, dan tabel panjang halaman menurut tujuan. Lead magnet dikonfirmasi harus pendek (2.4rb px vs 11rb px halaman jualan).

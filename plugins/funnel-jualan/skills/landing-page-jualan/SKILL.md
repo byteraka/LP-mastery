@@ -26,6 +26,7 @@ Aturan detailnya ada di file referensi, tidak di sini. Membukanya bukan opsional
 | `references/blok.md` | Saat menulis tiap blok | Wajib |
 | `references/desain.md` | Aturan craft: mobile, kecepatan, komponen | Wajib |
 | `references/swipe.md` | Saat buntu cari bentuk headline, CTA, atau bukti | Kalau perlu |
+| `references/bedah-referensi.md` | Saat user menyebut salah satu halaman referensi sebagai acuan | Kalau perlu |
 | `assets/template.html` | Kerangka HTML | Kalau perlu |
 
 Jangan mengerjakan dari ingatan.
