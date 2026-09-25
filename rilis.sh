@@ -73,4 +73,4 @@ echo "  git commit -m \"v$VERSI: ${PESAN:-perbaikan}\""
 echo "  git push"
 echo
 echo "Setelah di-push, orang yang sudah menyalakan auto-update akan menerimanya"
-echo "otomatis. Yang belum, tinggal jalankan:  /plugin update funnel-jualan@jualan-id"
+echo "otomatis. Yang belum, tinggal jalankan:  /plugin update funnel-jualan@tukang-lp"
