@@ -1,4 +1,4 @@
-# Jualan ID — plugin Claude untuk landing page & Meta Ads
+# Tukang LP — plugin Claude untuk landing page & Meta Ads
 
 Skill untuk bikin halaman penjualan dan materi iklan yang tinggi konversi di pasar Indonesia.
 Gratis, boleh dipakai siapa saja.
@@ -8,15 +8,15 @@ Gratis, boleh dipakai siapa saja.
 Di Claude Code, jalankan dua perintah ini:
 
 ```
-/plugin marketplace add GANTI-USERNAME/claude-plugins-jualan
-/plugin install funnel-jualan@jualan-id
+/plugin marketplace add byteraka/LP-mastery
+/plugin install funnel-jualan@tukang-lp
 ```
 
 Di aplikasi Claude desktop, pakai plugin browser-nya.
 
 **Supaya dapat update otomatis**, nyalakan sekali: `/plugin` → tab **Marketplaces** →
-pilih `jualan-id` → **Enable auto-update**. Kalau tidak dinyalakan, kamu tetap bisa
-update manual kapan saja dengan `/plugin update funnel-jualan@jualan-id`.
+pilih `tukang-lp` → **Enable auto-update**. Kalau tidak dinyalakan, kamu tetap bisa
+update manual kapan saja dengan `/plugin update funnel-jualan@tukang-lp`.
 
 ## Isinya
 
